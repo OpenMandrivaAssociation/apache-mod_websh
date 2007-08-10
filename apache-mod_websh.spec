@@ -13,7 +13,7 @@ URL:		http://tcl.apache.org/websh/
 Source0:	websh-%{version}.tar.bz2
 Source1:	%{mod_conf}
 Patch0:		%{mod_name}-register.patch
-Patch1:		websh-3.5.0-tcl8.4.patch
+Patch1:		websh-tcl_version.diff
 BuildRequires:	tcl >= 8.4.5
 BuildRequires:	tcl-devel >= 8.4.5
 BuildRequires:	autoconf2.5
