@@ -6,7 +6,7 @@
 Summary:	Tcl scripting as a DSO module for the apache web server
 Name:		apache-%{mod_name}
 Version:	3.5.0
-Release:	%mkrel 8
+Release:	%mkrel 9
 Group:		System/Servers
 License:	Apache License
 URL:		http://tcl.apache.org/websh/
@@ -28,8 +28,6 @@ Requires:	apache-conf >= 2.2.0
 Requires:	apache >= 2.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	file
-Provides:	apache2-mod_websh
-Obsoletes:	apache2-mod_websh
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
