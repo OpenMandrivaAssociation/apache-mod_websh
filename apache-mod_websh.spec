@@ -58,7 +58,7 @@ libtoolize --copy --force; aclocal-1.7; autoconf
 
 export INC="-I`%{_sbindir}/apxs -q INCLUDEDIR` `apr-1-config --includes` `apu-1-config --includes`"
 
-%configure2_5x \
+%configure2_5x --localstatedir=/var/lib \
     --enable-shared \
     --enable-static \
     --enable-threads \
