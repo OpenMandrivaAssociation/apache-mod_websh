@@ -6,7 +6,7 @@
 Summary:	Tcl scripting as a DSO module for the apache web server
 Name:		apache-%{mod_name}
 Version:	3.5.0
-Release:	%mkrel 10
+Release:	%mkrel 11
 Group:		System/Servers
 License:	Apache License
 URL:		http://tcl.apache.org/websh/
