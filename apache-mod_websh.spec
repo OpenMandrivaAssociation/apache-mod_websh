@@ -54,7 +54,7 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 cd src/unix
 export WANT_AUTOCONF_2_5=1
 rm -f missing
-libtoolize --copy --force; aclocal-1.7; autoconf
+libtoolize --copy --force; aclocal-1.7; autoconf; automake --copy --foreign --add-missing --force-missing ||:
 
 export INC="-I`%{_sbindir}/apxs -q INCLUDEDIR` `apr-1-config --includes` `apu-1-config --includes`"
 
