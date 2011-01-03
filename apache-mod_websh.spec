@@ -6,7 +6,7 @@
 Summary:	Tcl scripting as a DSO module for the apache web server
 Name:		apache-%{mod_name}
 Version:	3.5.0
-Release:	%mkrel 16
+Release:	%mkrel 17
 Group:		System/Servers
 License:	Apache License
 URL:		http://tcl.apache.org/websh/
@@ -17,7 +17,7 @@ Patch1:		websh-tcl_version.diff
 BuildRequires:	tcl >= 8.4.5
 BuildRequires:	tcl-devel >= 8.4.5
 BuildRequires:	autoconf2.5
-BuildRequires:	automake1.7
+BuildRequires:	automake
 Requires:	tcl >= 8.4.5
 Requires(pre): tcl >= 8.4.5
 Requires(pre): rpm-helper
@@ -54,7 +54,7 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 cd src/unix
 export WANT_AUTOCONF_2_5=1
 rm -f missing
-libtoolize --copy --force; aclocal-1.7; autoconf; automake --copy --foreign --add-missing --force-missing ||:
+libtoolize --copy --force; aclocal; autoconf; automake --copy --foreign --add-missing --force-missing ||:
 
 export INC="-I`%{_sbindir}/apxs -q INCLUDEDIR` `apr-1-config --includes` `apu-1-config --includes`"
 
