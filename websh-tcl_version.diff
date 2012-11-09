@@ -1,0 +1,11 @@
+--- src/unix/configure.in	2002-08-01 16:03:56.000000000 +0200
++++ src/unix/configure.in.oden	2003-04-08 17:26:52.000000000 +0200
+@@ -318,7 +318,7 @@
+ #     set VARIABLE to the entire path of the program found.
+ 
+ AC_PATH_PROGS(TCLSH_PROG, \
+-  tclsh8.3${EXEEXT} tclsh83${EXEEXT} tclsh8.2${EXEEXT} tclsh82${EXEEXT}, :, \
++  tclsh8.6${EXEEXT} tclsh86${EXEEXT} tclsh8.5${EXEEXT} tclsh85${EXEEXT} tclsh8.4${EXEEXT} tclsh84${EXEEXT} tclsh8.3${EXEEXT} tclsh83${EXEEXT} tclsh8.2${EXEEXT} tclsh82${EXEEXT}, :, \
+   :${TCL_PACKAGE_PATH}/../bin:.:${prefix}:${exec_prefix}:${PATH})
+ 
+ if test "x${TCLSH_PROG}" = "x:" ; then

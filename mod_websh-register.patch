@@ -1,0 +1,18 @@
+--- src/generic/mod_websh.c	2002-04-18 16:40:11.000000000 +0200
++++ src/generic/mod_websh.c.oden	2002-11-01 15:25:34.000000000 +0100
+@@ -434,7 +434,15 @@
+ 
+ #else /* APACHE2 */
+ 
++static int websh_init_handler(apr_pool_t *p, apr_pool_t *plog,
++                                apr_pool_t *ptemp, server_rec *s)
++{
++    ap_add_version_component(p, "mod_websh/3.5.0");
++    return OK;
++}
++        
+ static void register_websh_hooks(apr_pool_t *p) {
++    ap_hook_post_config(websh_init_handler, NULL, NULL, APR_HOOK_MIDDLE);
+     ap_hook_handler(websh_handler, NULL, NULL, APR_HOOK_MIDDLE);
+ 
+     ap_hook_child_init(websh_init_child, NULL, NULL, APR_HOOK_MIDDLE);
