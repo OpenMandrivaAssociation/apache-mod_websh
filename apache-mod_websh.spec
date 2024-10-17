@@ -9,7 +9,7 @@ Version:	3.5.0
 Release:	20
 Group:		System/Servers
 License:	Apache License
-URL:		http://tcl.apache.org/websh/
+URL:		https://tcl.apache.org/websh/
 Source0:	websh-%{version}.tar.bz2
 Source1:	%{mod_conf}
 Patch0:		%{mod_name}-register.patch
